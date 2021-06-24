@@ -1,5 +1,20 @@
 <?php include ("topbit.php"); 
 
+
+    
+session_start(); // to allow variable transfer between pages...
+include("config.php");
+
+//Connect to Database...
+
+$dbconnect=mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
+
+
+if(mysqli_connect_errno()) {
+echo "Connection Failed:".mysqli_connect_error();
+exit;
+}
+
     $find_sql = "SELECT * FROM `cubetimes` ";
     $find_query = mysqli_query($dbconnect, $find_sql);
     $find_rs = mysqli_fetch_assoc($find_query);
