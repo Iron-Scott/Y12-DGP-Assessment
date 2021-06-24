@@ -7,7 +7,7 @@ include("config.php");
 
 //Connect to Database...
 
-$dbconnect=mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
+$dbconnect = mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
 
 
 if(mysqli_connect_errno()) {
@@ -15,7 +15,10 @@ echo "Connection Failed:".mysqli_connect_error();
 exit;
 }
 
-    $find_sql = "SELECT * FROM `cubetimes` ";
+    $find_sql = "SELECT * FROM `cubetimes` 
+    JOIN userid ON (cubetimes.User = userid.UserID)
+    
+    ";
     $find_query = mysqli_query($dbconnect, $find_sql);
     $find_rs = mysqli_fetch_assoc($find_query);
     $count = mysqli_num_rows($find_query);
@@ -50,11 +53,15 @@ exit;
 
         <!-- Results go here -->
         <div class="results">
-            <?php echo $find_rs["Time"]; ?>
-        </div> <!-- /Results -->
+            <span class="sub_heading">
+                <?php echo $find_rs["Time"]; ?>
+            </span>
+        
 
         <br />
 
+        <?php echo $find_rs["User"]; ?>
+        <?php echo $find_rs["Username"]; ?>
     <?php    
 
         } // end results 'do'
