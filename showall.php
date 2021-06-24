@@ -50,8 +50,10 @@ exit;
 
         <!-- Results go here -->
         <div class="results">
-            You have results!
+            <?php echo $find_rs["Time"]; ?>
         </div> <!-- /Results -->
+
+        <br />
 
     <?php    
 
