@@ -1,7 +1,6 @@
 <?php include ("topbit.php"); 
 
 
-    
 session_start(); // to allow variable transfer between pages...
 include("config.php");
 
@@ -15,8 +14,7 @@ echo "Connection Failed:".mysqli_connect_error();
 exit;
 }
 
-    $find_sql = "SELECT * FROM `cubetimes` 
-    JOIN userid ON (cubetimes.User = userid.UserID)
+    $find_sql = "SELECT * FROM `cubetimes` JOIN userid ON (cubetimes.User = userid.UserID)
     
     ";
     $find_query = mysqli_query($dbconnect, $find_sql);
@@ -55,13 +53,15 @@ exit;
         <div class="results">
             <span class="sub_heading">
                 <?php echo $find_rs["Time"]; ?>
-            </span>
-        
+            </span> 
 
-        <br />
+    <p>
+        <?php echo $find_rs['User'] ?>
+        <?php echo $find_rs['Username'] ?>
+    </p>
 
-        <?php echo $find_rs["User"]; ?>
-        <?php echo $find_rs["Username"]; ?>
+           
+        </div>
     <?php    
 
         } // end results 'do'
