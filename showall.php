@@ -14,7 +14,9 @@ echo "Connection Failed:".mysqli_connect_error();
 exit;
 }
 
-    $find_sql = "SELECT * FROM `cubetimes` JOIN userid ON (cubetimes.User = userid.UserID)
+    $find_sql = "SELECT * FROM `cubetimes` 
+    JOIN userid ON (cubetimes.User = userid.UserID)
+    JOIN cubetype ON (cubetimes.CubeType = cubetype.CubeID)
     
     ";
     $find_query = mysqli_query($dbconnect, $find_sql);
@@ -52,13 +54,21 @@ exit;
         <!-- Results go here -->
         <div class="results">
             <span class="sub_heading">
+            <b>Time</b>:
                 <?php echo $find_rs["Time"]; ?>
             </span> 
 
     <p>
-        <?php echo $find_rs['User'] ?>
+        
+        <b>User</b>:
         <?php echo $find_rs['Username'] ?>
     </p>
+    <br />
+
+    <p>
+    
+        <b>Cube Type</b>:
+        <?php echo $find_rs['Cube Type'] ?>
 
            
         </div>
