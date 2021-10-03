@@ -11,14 +11,14 @@
 		<meta name="keywords" content="Speedcubing Timer and Database"">
 		<meta name="keywords" content="cubetimes">
 		
-		<title>Speedcubing Database</title>
+		<title>Pokemon Database</title>
 		
 		<!-- for multiple fonts change | to %7c * no spaces* -->
 		<link href="http://fonts.googleapis.com/css?family=Lato%7cUbuntu"
 		rel="stylesheet">
 		
 		<link rel"stylesheet" href="css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/data_style.css"> <!--custom style sheet -->
+		<link rel="stylesheet" href="css/data_styles.css"> <!--custom style sheet -->
 	</head>
 
 
@@ -34,6 +34,6 @@
 			</div>
 			
 			<div class="box banner">
-				<h1>Speedcubing Database</h1>
+				<h1>Pokemon Database</h1>
 			</div> <!-- / banner -->
 			

@@ -42,7 +42,7 @@ exit;
 			</div>
 			
 			<div class="box side">
-				<h2><h2>Add A Time |
+				<h2><h2>Add A Pokemon |
 					<a class="side" href="showall.php">Show All </a></h2>
 				
 				<p>

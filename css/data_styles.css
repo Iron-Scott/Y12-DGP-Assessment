@@ -89,7 +89,7 @@ body {
     grid-area: foot;
     text-align: right;
     color: #fff;
-    background-color: #636263;
+    background-color: #970820;
 }
 
 
@@ -101,7 +101,7 @@ h1, h2, h3, h4 {
 
 .sub_heading {
     font-family: 'Ubuntu', sans-serif;
-    color: #593849;
+    color: #bb2431;
     font-weight: bold;
 }
 
@@ -144,10 +144,113 @@ a.side:hover {color:#8a1737; }
 
 
 
+    /* Side Form formatting */
+
+.searchform {
+    width: 250px;
+    margin: 5px;
+}
 
 
+.search {
+    padding:8px 15px;
+    background: #fff;
+    border: 0px solid #dbdbdb;
+    width: 200px;
 
+}
 
+.submit {
+    font-family: FontAwesome, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    position:relative;
+    width: 45px;
+    left:-1px;
+    background-color: #99070e;
+    color:#d6d3d7;
+    border: 1px solid #636263;
+    border-radius: 0 5px 5px 0;
+}
 
+input[type="submit"]:hover {
+    background-color: #000;
+}
 
+input.search[type=text], select {
+    width: 200px;
 
+}
+
+input {
+    height: 40px;
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+}
+
+.free {
+    width: 245px;
+    border-radius: 5px;
+    font-size: 105%;
+    
+}
+
+\\Type Frame CSS \\
+.type-frame{
+    border-radius: 10px;
+    background-color: #f4ff7c;
+    border: solid 1px #4f570b;
+    padding: 5px;
+}
+
+.type-button {
+    margin: auto;
+    width: 95%;
+    border-radius: 5px;
+    background-color: #2F480D;
+    font-size: 105%;
+}
+
+.type {
+    width: 95%;
+    margin-bottom: 5px;
+    
+}
+
+.type-txt {
+    vertical-align: middle;
+    margin: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+\\Advanced Frame CSS\\
+
+.advanced-frame{
+    border-radius: 10px;
+    background-color: #f4ff7c;
+    border: solid 1px #4f570b;
+    padding: 5px;
+}
+
+.advanced-button {
+    margin: auto;
+    width: 95%;
+    border-radius: 5px;
+    background-color: #2F480D;
+    font-size: 105%;
+}
+
+.adv {
+    width: 95%;
+    margin-bottom: 5px;
+    
+}
+
+.adv-txt {
+    vertical-align: middle;
+    margin: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+}
