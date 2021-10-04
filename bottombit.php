@@ -1,3 +1,5 @@
+
+
 <div class="box side">
 			<h2><h2>Add A Pokemon |
 				<a class="side" href="showall.php">Show All</a></h2>
@@ -18,6 +20,7 @@
 				<input class="submit free" type="submit" name="free"
 				value="All Normal Pokemon &nbsp; &#xf002;" />
 
+			</form>
 				<form class="searchform" method="post" action="legendary.php" 
 				enctype="multipart/form-data">
 
@@ -30,42 +33,8 @@
 			<hr />
 			<br />
 
-			<div class="type-frame">
 
-			<h2>Search For Type</h2>
-
-			<form class="searchform" method= "post"
-			action="type.php" enctype="multipart/form-data">
-
-			<select class="type" name="type">
-
-			<?php
-				$pokemontype_sql="SELECT * FROM `type1` ORDER BY `type`.`type1` ASC";
-				$pokemontype_query=mysqli_query($dbconnect, $pokemontype_sql);
-				$pokemontype_rs=mysqli_fetch_assoc($pokemontype_query);
-			
-				do {
-					?>
-
-					<option value="<?php echo $pokemontype_rs['Pokemon Type']; ?>"></option>
-				
-					<?php
-			}
-			
-			while ($pokemontype_rs=mysqli_fetch_assoc($pokemontype_query));
-			?>
-
-		</select>
-
-		<input class="submit type-button" type="submit" action="type.php"
-			name="type" value="Search Type &nbsp; &#xf002;" />
-</div>
-
-
-
-			<br />
-			<hr />
-			<br />	
+<!-- Review type-frame.php for code -->
 
 			<div class="advanced-frame">
 		
@@ -80,6 +49,8 @@
 			<input class="adv" type="text" name="adv_pokemonname" size="40"
 			value="" placeholder="Name" />
 
+		</form>
+
 
 
 		
@@ -90,20 +61,20 @@
 			<select class="search adv" name="type">
 
 			<?php
-				$pokemontype_sql="SELECT * FROM `cubetype` ORDER BY `type`.`type1` ASC";
+				$pokemontype_sql="SELECT * FROM `type2` ORDER BY `type2`.`Type2` ASC";
 				$pokemontype_query=mysqli_query($dbconnect, $pokemontype_sql);
 				$pokemontype_rs=mysqli_fetch_assoc($pokemontype_query);
 			
 				do{
 					?>
 
-					<option value="<?php echo $pokemontype_rs['Pokemon Type']; ?>"></option>
+					<option value="<?php echo $pokemontype_rs['Type 2']; ?>"></option>
 					
 					<?php
 
 				} // end cubetype do loop
 
-				while ($cubetype_rs=mysqli_fetch_assoc($cubetype_query));
+				while ($pokemontype_rs=mysqli_fetch_assoc($pokemontype_query));
 
 			?>
 
@@ -124,12 +95,12 @@
 			</div>
 
 			<input class="adv-txt" type="checkbox" name="in-app"
-			value="0">Less Than...
+			value="0">Legendary
 
 			<input class="submit advanced-button" type="submit" action="advanced.php"
 			name="advanced" value="Search &nbsp; &#xf002;" />
 
-			-->
+			
 			</div> <!-- / wrapper -->	
 			</div>
 		</form>
