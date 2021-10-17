@@ -18,7 +18,6 @@ $find_sql = "SELECT * FROM `pokemon`
 JOIN type1 ON (pokemon.Type1 = type1.type1ID)
 JOIN type2 ON (pokemon.Type2 = type2.type2ID)
 JOIN generation ON (pokemon.Generation = generation.GenerationID)
-WHERE `name` LIKE '%$name_user%'
 
 ";
     $find_query = mysqli_query($dbconnect, $find_sql);

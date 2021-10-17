@@ -58,23 +58,46 @@
 
 			
 			<!-- Cube Type Dropdown -->
-			<select class="search adv" name="type">
 
+			<select class="search adv" name="type">
+			<p>Type 1:</p>
 			<?php
-				$pokemontype_sql="SELECT * FROM `type2` ORDER BY `type2`.`Type2` ASC";
+				$pokemontype_sql="SELECT * FROM `type1` ORDER BY `type1`.`Type1` ASC ";
 				$pokemontype_query=mysqli_query($dbconnect, $pokemontype_sql);
 				$pokemontype_rs=mysqli_fetch_assoc($pokemontype_query);
 			
-				do{
+				do {
 					?>
 
-					<option value="<?php echo $pokemontype_rs['Type 2']; ?>"></option>
+					<option value="<?php echo $pokemontype_rs['Type1']; ?>"><?php echo $pokemontype_rs['Type1']; ?></option>
 					
 					<?php
 
 				} // end cubetype do loop
-
+ 
 				while ($pokemontype_rs=mysqli_fetch_assoc($pokemontype_query));
+
+			?>
+
+			</select>
+
+			<select class="search adv" name="type">
+			<p>Type 2:</p>
+			<?php
+				$pokemontype2_sql="SELECT * FROM `type2` ORDER BY `type2`.`Type2` ASC ";
+				$pokemontype2_query=mysqli_query($dbconnect, $pokemontype2_sql);
+				$pokemontype2_rs=mysqli_fetch_assoc($pokemontype2_query);
+			
+				do {
+					?>
+
+					<option value="<?php echo $pokemontype2_rs['Type2']; ?>"><?php echo $pokemontype2_rs['Type2']; ?></option>
+					
+					<?php
+
+				} // end cubetype do loop
+ 
+				while ($pokemontype2_rs=mysqli_fetch_assoc($pokemontype2_query));
 
 			?>
 
@@ -83,14 +106,6 @@
 			<!-- Cube Times Less Than, More Than -->
 
 		<div class = "flex-container">
-			<div class="adv-txt">
-				Time:
-			</div> <!-- Time Label -->
-
-			<div>
-				<input class="adv" type="text" name="time" size="40"
-				value="" placeholder="..."/>
-			</div>
 
 			</div>
 

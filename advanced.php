@@ -18,20 +18,21 @@ $type2 = mysqli_real_escape_string($dbconnect, $_POST['type2']);
 $generation = mysqli_real_escape_string($dbconnect, $_POST['generation']);
 
 
-    if (isset($_POST['in_app'])) {
-    $in_app = 0;
+    if (isset($_POST['legendary'])) {
+    $legendary = 0;
     }
 
     else {
-        $in_app = 1;
+        $legendary = 1;
     }
     
 
-    $find_sql = "SELECT * FROM `cubetimes` 
+    $find_sql = "SELECT * FROM `pokemon` 
     JOIN type1 ON (pokemon.Type1 = type1.type1ID)
     JOIN type2 ON (pokemon.Type2 = type2.type2ID)
     JOIN generation ON (pokemon.Generation = generation.GenerationID)
     WHERE `name` LIKE '%$name_user%'
+    
     ;"
     
     $find_query = mysqli_query($dbconnect, $find_sql) or die(mysqli_error($dbconnect));
