@@ -32,6 +32,9 @@ $generation = mysqli_real_escape_string($dbconnect, $_POST['generation']);
     JOIN type2 ON (pokemon.Type2 = type2.type2ID)
     JOIN generation ON (pokemon.Generation = generation.GenerationID)
     WHERE `name` LIKE '%$name_user%'
+    AND `type1` LIKE '%$type1%'
+    AND `type2` LIKE '%$type2%'
+    AND `generation` LIKE '%$generation%'
     
     ;"
     

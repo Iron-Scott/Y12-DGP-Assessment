@@ -81,7 +81,7 @@
 
 			</select>
 
-			<select class="search adv" name="type">
+			<select class="search adv" name="type2">
 			<p>Type 2:</p>
 			<?php
 				$pokemontype2_sql="SELECT * FROM `type2` ORDER BY `type2`.`Type2` ASC ";
@@ -103,7 +103,27 @@
 
 			</select>
 				<!-- Something is causing this advanced frame to fail. No idea why. Will make fixes later. -->
-			<!-- Cube Times Less Than, More Than -->
+			
+			<select class="search adv" name="generation">
+			<p>Generation:</p>
+			<?php
+				$pokemongeneration_sql="SELECT * FROM `generation` ORDER BY `generation`.`Generation` ASC ";
+				$pokemongeneration_query=mysqli_query($dbconnect, $pokemongeneration_sql);
+				$pokemongeneration_rs=mysqli_fetch_assoc($pokemongeneration_query);
+			
+				do {
+					?>
+
+					<option value="<?php echo $pokemongeneration_rs['Generation']; ?>"><?php echo $pokemongeneration_rs['Generation']; ?></option>
+					
+					<?php
+
+				} // end cubetype do loop
+ 
+				while ($pokemongeneration_rs=mysqli_fetch_assoc($pokemongeneration_query));
+
+			?>
+
 
 		<div class = "flex-container">
 

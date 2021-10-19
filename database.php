@@ -32,8 +32,10 @@
 
 	<?php include("topbit.php");
 	
-	$find_sql = "SELECT * FROM `cubetimes` 
-	JOIN userid ON (cubetimes.User = userid.UserID)";
+	$find_sql = "SELECT * FROM `pokemon` 
+	JOIN type1 ON (pokemon.Type1 = type1.type1ID)
+    JOIN type2 ON (pokemon.Type2 = type2.type2ID)
+    JOIN generation ON (pokemon.Generation = generation.GenerationID);"
  	$find_query = mysqli_query($dbconnect, $find_sql);
 	$find_rs = mysqli_fetch_assoc($find_query);
 	$count = mysqli_num_rows($find_query);
