@@ -35,6 +35,7 @@ $generation = mysqli_real_escape_string($dbconnect, $_POST['generation']);
     AND `type1` LIKE '%$type1%'
     AND `type2` LIKE '%$type2%'
     AND `generation` LIKE '%$generation%'
+    AND (`legendary` = $legendary OR `legendary` = 0)
     
     ;"
     

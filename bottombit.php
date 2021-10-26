@@ -41,7 +41,7 @@
 			<h2>Advanced Search</h2>
 
 
-			
+			<p>Pokemon Name:</p>
 
 			<form class="searchform" method="post"
 			action="advanced.php" enctype="multipart/form-data">
@@ -57,10 +57,11 @@
 			
 
 			
-			<!-- Cube Type Dropdown -->
+			<!-- Pokemon Type One -->
 
 			<select class="search adv" name="type">
-			<p>Type 1:</p>
+			
+			<option value="" disabled selected>Type 1...</option>
 			<?php
 				$pokemontype_sql="SELECT * FROM `type1` ORDER BY `type1`.`Type1` ASC ";
 				$pokemontype_query=mysqli_query($dbconnect, $pokemontype_sql);
@@ -69,7 +70,7 @@
 				do {
 					?>
 
-					<option value="<?php echo $pokemontype_rs['Type1']; ?>"><?php echo $pokemontype_rs['Type1']; ?></option>
+					<option value="<?php echo $pokemontype_rs['Type1'] ?>"><?php echo $pokemontype_rs['Type1'] ?></option>
 					
 					<?php
 
@@ -82,7 +83,8 @@
 			</select>
 
 			<select class="search adv" name="type2">
-			<p>Type 2:</p>
+			
+			<option value="" disabled selected>Type 2...</option>
 			<?php
 				$pokemontype2_sql="SELECT * FROM `type2` ORDER BY `type2`.`Type2` ASC ";
 				$pokemontype2_query=mysqli_query($dbconnect, $pokemontype2_sql);
@@ -105,6 +107,8 @@
 				<!-- Something is causing this advanced frame to fail. No idea why. Will make fixes later. -->
 			
 			<select class="search adv" name="generation">
+
+			<option value="" disabled selected>Generation...</option>
 			<p>Generation:</p>
 			<?php
 				$pokemongeneration_sql="SELECT * FROM `generation` ORDER BY `generation`.`Generation` ASC ";
