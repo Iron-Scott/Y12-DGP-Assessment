@@ -43,8 +43,7 @@
 
 			<p>Pokemon Name:</p>
 
-			<form class="searchform" method="post"
-			action="advanced.php" enctype="multipart/form-data">
+			
 
 			<input class="adv" type="text" name="adv_pokemonname" size="40"
 			value="" placeholder="Name" />
@@ -108,7 +107,7 @@
 			
 			<select class="search adv" name="generation">
 
-			<option value="" disabled selected>Generation...</option>
+			<option value="" disabled selected>Type 1...</option>
 			<p>Generation:</p>
 			<?php
 				$pokemongeneration_sql="SELECT * FROM `generation` ORDER BY `generation`.`Generation` ASC ";
@@ -133,13 +132,14 @@
 
 			</div>
 
-			<input class="adv-txt" type="checkbox" name="in-app"
+			<form class="adv-txt" type="checkbox" name="advanced"
 			value="0">Legendary
 
 			<input class="submit advanced-button" type="submit" action="advanced.php"
 			name="advanced" value="Search &nbsp; &#xf002;" />
 
-			
+			<form class="searchform" method="post"
+			action="advanced.php" enctype="multipart/form-data">
 			</div> <!-- / wrapper -->	
 			</div>
 		</form>
