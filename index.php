@@ -44,9 +44,9 @@ exit;
 				<li class="nav-item">
 					<a class="nav-link" ref="database.php">Database</a>
 				</li>
-        <li class="nav-item">
+        <!--<li class="nav-item">
 					<a class="nav-link" href="contact-us.php">Contact-Us</a>
-				</li>
+				</li> -->
 			</ul>
 		</nav>
 				</p>

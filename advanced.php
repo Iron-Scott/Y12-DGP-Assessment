@@ -35,12 +35,11 @@ $generation = mysqli_real_escape_string($dbconnect, $_POST['generation']);
     AND `type1` LIKE '%$type1%'
     AND `type2` LIKE '%$type2%'
     AND `generation` LIKE '%$generation%'
-    AND (`legendary` = $legendary OR `legendary` = 0)
     
     ;"
     
-    $find_query = mysqli_query($dbconnect, $find_sql) or die(mysqli_error($dbconnect));
-    $find_rs = mysqli_fetch_assoc($find_query) or die(mysqli_error($dbconnect));
+    $find_query = mysqli_query($dbconnect, $find_sql);
+    $find_rs = mysqli_fetch_assoc($find_query);
     $count = mysqli_num_rows($find_query);
     ?>
  

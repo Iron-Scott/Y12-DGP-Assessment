@@ -36,12 +36,23 @@
 
 <!-- Review type-frame.php for code -->
 
-			<div class="advanced-frame">
+			
+
+		<div class="flex-container">
+
+			</div>
+
+			
+
+			<form class="searchform" method="post" action="advanced.php" 
+				enctype="multipart/form-data">
+
+				<div class="advanced-frame">
 		
 			<h2>Advanced Search</h2>
 
 
-			<p>Pokemon Name:</p>
+			
 
 			
 
@@ -49,12 +60,6 @@
 			value="" placeholder="Name" />
 
 		</form>
-
-
-
-		
-			
-
 			
 			<!-- Pokemon Type One -->
 
@@ -107,7 +112,7 @@
 			
 			<select class="search adv" name="generation">
 
-			<option value="" disabled selected>Type 1...</option>
+			<option value="" disabled selected>Generation...</option>
 			<p>Generation:</p>
 			<?php
 				$pokemongeneration_sql="SELECT * FROM `generation` ORDER BY `generation`.`Generation` ASC ";
@@ -128,22 +133,15 @@
 			?>
 
 
-		<div class = "flex-container">
+			<input class="submit advanced-button" type="submit" name="advanced"
+				value="Advanced Search... &nbsp; &#xf002;" />
 
-			</div>
-
-			<form class="adv-txt" type="checkbox" name="advanced"
-			value="0">Legendary
-
-			<input class="submit advanced-button" type="submit" action="advanced.php"
-			name="advanced" value="Search &nbsp; &#xf002;" />
-
-			<form class="searchform" method="post"
-			action="advanced.php" enctype="multipart/form-data">
 			</div> <!-- / wrapper -->	
 			</div>
-		</form>
 			
+		</form>
+	
+
 		<div class="box footer">
 				<p>Scoot 2021</p>
 			</div> <!-- / footer -->
