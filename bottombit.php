@@ -44,13 +44,15 @@
 
 			
 
-			<form class="searchform" method="post" action="advanced.php" 
-				enctype="multipart/form-data">
 
 				<div class="advanced-frame">
 		
+				
+
 			<h2>Advanced Search</h2>
 
+			
+			
 
 			
 
@@ -59,11 +61,11 @@
 			<input class="adv" type="text" name="adv_pokemonname" size="40"
 			value="" placeholder="Name" />
 
-		</form>
+		
 			
 			<!-- Pokemon Type One -->
 
-			<select class="search adv" name="type">
+			<select class="search adv" name="type1">
 			
 			<option value="" disabled selected>Type 1...</option>
 			<?php
@@ -132,14 +134,20 @@
 
 			?>
 
+				<form class="searchform" method="post" action="advanced.php" 
+				enctype="multipart/form-data">
+
+		
 
 			<input class="submit advanced-button" type="submit" name="advanced"
 				value="Advanced Search... &nbsp; &#xf002;" />
 
+				</form>
+
 			</div> <!-- / wrapper -->	
 			</div>
 			
-		</form>
+		
 	
 
 		<div class="box footer">

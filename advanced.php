@@ -13,6 +13,7 @@ if(mysqli_connect_errno()) {
 echo "Connection Failed:".mysqli_connect_error();
 exit;
 }
+$name_user = mysqli_real_escape_string($dbconnect, $_POST['name']);
 $type1 = mysqli_real_escape_string($dbconnect, $_POST['type1']);
 $type2 = mysqli_real_escape_string($dbconnect, $_POST['type2']);
 $generation = mysqli_real_escape_string($dbconnect, $_POST['generation']);
