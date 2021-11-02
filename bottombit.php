@@ -50,20 +50,17 @@
 				
 
 			<h2>Advanced Search</h2>
-
-			
 			
 
-			
-
-			
+			<form class="searchform" method="post" action="advanced.php" 
+				enctype="multipart/form-data">
 
 			<input class="adv" type="text" name="adv_pokemonname" size="40"
 			value="" placeholder="Name" />
 
 		
 			
-			<!-- Pokemon Type One -->
+			<!--Pokemon Type One-->
 
 			<select class="search adv" name="type1">
 			
@@ -146,7 +143,7 @@
 
 			</div> <!-- / wrapper -->	
 			</div>
-			
+			-->	
 		
 	
 
