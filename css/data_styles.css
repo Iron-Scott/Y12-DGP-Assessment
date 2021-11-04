@@ -1,7 +1,7 @@
 body {
     margin: auto;
     padding: 50px;
-    color: #000;
+    color: #fff;
     font-family: 'Lato', sans-serif;
 }
 
@@ -45,11 +45,11 @@ body {
 
 /* make logo and banner the same colour */
 .logo, .main {
-    background-color: #dfcfbc;  /* beige */
+    background-color: #fff;  /* beige */
 }
 
 .banner, .side {
-    background-color: #d6d3d7; /* blue grey */
+    background-color: rgb(167, 1, 1); /* blue grey */
 }
 
 
@@ -78,6 +78,7 @@ body {
 .main {
     grid-area: main;
     color: #000;
+    background-color: rgb(197, 13, 13);
 }
 
 .side {
@@ -126,9 +127,9 @@ a.side:hover {color:#8a1737; }
 /**** Results ****/
 
 .results {
-    background-color: #f4ebe1;
+    background-color: white;
     border-radius: 10px;
-    border: 1px solid #000;
+    border: 1px solid black;
     padding: 5px;
 }
 
