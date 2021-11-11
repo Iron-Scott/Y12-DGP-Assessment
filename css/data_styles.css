@@ -15,7 +15,7 @@ body {
 
 /* message styling if grid not supported */
 .message {
-    background-color: #333;
+    background-color: rgb(0, 0, 0);
     color: #fff;
     padding: 10px;
 }
@@ -37,7 +37,7 @@ body {
 
 
 .box {
-    background-color: #444; /* dark grey */
+    background-color: #fff; /* dark grey */
     border-radius: 5px;
     padding: 20px;
     }
@@ -78,7 +78,7 @@ body {
 .main {
     grid-area: main;
     color: #000;
-    background-color: rgb(197, 13, 13);
+    background-color: black;
 }
 
 .side {
@@ -98,6 +98,7 @@ body {
 
 h1, h2, h3, h4 {
     font-family: 'Ubuntu', sans-serif;
+    color: white;
 }
 
 .sub_heading {
@@ -110,8 +111,8 @@ h1, h2, h3, h4 {
 
 /* links in page */
 
-a:link{color: #d6d3d7;}
-a:visited{color: #ccc;}
+a:link{color: #fff;}
+a:visited{color: rgb(0, 255, 13);}
 a:hover{color: #dfcfbc;}
 
 /* side links */
@@ -120,8 +121,8 @@ a.side {
     font-size: 100%;
     text-decoration: none;
 }
-a.side:link, a.side:visited {color: #636263;}
-a.side:hover {color:#8a1737; }
+a.side:link, a.side:visited {color: #fff;}
+a.side:hover {color:#4e4e4e; }
 
 
 /**** Results ****/
@@ -140,6 +141,7 @@ a.side:hover {color:#8a1737; }
     color: #8a1737;
     border-radius: 5px;
     padding: 20px;
+    color: black;
     }
 
 
