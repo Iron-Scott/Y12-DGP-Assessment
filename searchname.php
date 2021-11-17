@@ -35,7 +35,7 @@ exit;
 <div class="box main">
     <h2>Pokemon Name Results</h2>
 
-    <h3>Searched for: <?php echo $name_user ?></h3>
+    <p>Searched for: <?php echo $name_user ?></p>
 
     <?php include ("results.php") ?>
 
