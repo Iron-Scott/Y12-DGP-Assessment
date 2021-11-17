@@ -34,6 +34,7 @@ JOIN generation ON (pokemon.Generation = generation.GenerationID)
     <?php include ("results.php") ?>
 
 
+
     </div> <!-- / main -->
 
 
